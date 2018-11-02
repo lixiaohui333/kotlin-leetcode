@@ -1,7 +1,6 @@
 package lxh.com.easy;
 
 import java.util.Arrays;
-import java.util.Stack;
 
 public class SortArrayByParityII {
 
@@ -41,10 +40,10 @@ public class SortArrayByParityII {
 	// for (int i = 0; i < A.length; i++) {
 	//
 	// if(A[i]%2==0){
-	// //ÆæÊý
+	// //ï¿½ï¿½ï¿½ï¿½
 	// oddNum.push(A[i]);
 	// }else{
-	// //Å¼Êý
+	// //Å¼ï¿½ï¿½
 	// evenNum.push(A[i]);
 	// }
 	// }

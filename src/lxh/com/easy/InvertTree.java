@@ -1,11 +1,9 @@
 package lxh.com.easy;
 
+import lxh.com.easy.comm.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
-
-import javax.management.Query;
-
-import lxh.com.easy.comm.TreeNode;
 
 public class InvertTree {
 	
