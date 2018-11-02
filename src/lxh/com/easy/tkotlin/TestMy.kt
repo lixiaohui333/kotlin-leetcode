@@ -4,10 +4,8 @@ object TestMy {
 
     @JvmStatic
     fun main(args: Array<String>) {
-        val aa = 1
-        val bb = 2
-        val a = mutableListOf<Int>(0, 1, 2,3,4)
+        val aa = "asdasd"
 
-        println("--a:${ a.filter { it % 2 == 0 }}")
+        println("--a:${ aa.split(".").size}")
     }
 }
