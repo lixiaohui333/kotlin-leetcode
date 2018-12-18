@@ -14,21 +14,60 @@ public class NumUniqueEmails929 {
 
         HashSet<String> allSet = new HashSet<>();
 
-        String s = null;
+        StringBuilder startSb;
+        StringBuilder endSb;
+
         for (String temp :
                 emails) {
-            String[] split = temp.split("@");
-            if (split.length == 2) {
-                s = split[0];
-                s = s.replace(".", "");
-                String[] split1 = s.split(",");
-                if (split1.length == 2) s = split1[0];
-            } else {
-                continue;
+
+            int length = temp.length() - 1;
+            int index = 0;
+            startSb = new StringBuilder();
+            endSb = new StringBuilder();
+
+            while (index < length) {
+
+
+                char startChar = temp.charAt(index);
+                char endChar = temp.charAt(length);
+                if (startChar != '+' && startChar != '@') {
+                    startSb.append(startChar);
+                }
+                if (startChar != '@') {
+                    index++;
+                }
+                if (endChar != '@') {
+                    endSb.append(endChar);
+                }
+
             }
-            allSet.add(s);
+            allSet.add(startSb.append(endSb.toString()).toString());
         }
 
         return allSet.size();
     }
+//    public static int numUniqueEmails(String[] emails) {
+//
+//        HashSet<String> allSet = new HashSet<>();
+//
+//        String s = null;
+//        for (String temp :
+//                emails) {
+//            String[] split = temp.split("@");
+//            if (split.length == 2) {
+//                s = split[0];
+//                s = s.replace(".", "");
+//
+//                if(s.indexOf("+")>0){
+//                    s = s.substring(0,s.indexOf("+"));
+//                }
+////                if (split1.length == 2) s = split1[0];
+//            } else {
+//                continue;
+//            }
+//            allSet.add(s+split[1]);
+//        }
+//
+//        return allSet.size();
+//    }
 }
